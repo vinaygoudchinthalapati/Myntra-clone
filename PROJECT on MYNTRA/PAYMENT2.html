@@ -1,0 +1,329 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>PAYMENT2</title>
+	 <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjuaozpIlmQS71whjx-D9NPVEP-edSlWJatw&s" type="image/png">
+	<meta name="description" content="">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<!--For Plugins css-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" href="css/sina-nav.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	
+	
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="css/flickity.css" rel="stylesheet" type="text/css">
+
+
+<style>
+        .payment-option {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+			
+			
+        }
+        .payment-option:hover {
+            border-color:gray;
+            background-color:#ff3f6c;
+			color:white;
+        }
+
+.payment-option:hover .payment-offer {
+    color: white;
+}
+         
+        .payment-offer {
+            font-size: 0.9em;
+            color: #20c997;
+			 
+        }
+        .payment-methods {
+            margin-left: 20px;
+            display: none; /* Hide by default */
+			font-family:arial;
+			color:gray;
+			font-weight:bold;
+			font-size:14px;
+			 
+        }
+        .active + .payment-methods {
+            display: block; /* Show when active */
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+  .but{padding: 11px 52px;
+    
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+	font-family:arial;
+	text-decoration:none;
+	text-align:center;
+	
+  }
+  
+  
+  .but a {
+    
+    color:inherit;/*Use inherit when the child element's color should always match its parent.*/ 
+    
+  }
+  
+  
+   .but {
+    background-color: #ff3f6c;  
+    color: white;
+  }
+
+  
+  .but:hover {
+    background-color: #e62e5c;  
+    color: white;
+	
+  }
+		
+		
+		
+    </style>
+
+	</head>
+	
+	<body style="background-color:white;">
+	
+	
+	<nav class="sina-nav mobile-sidebar navbar-fixed" data-top="0">
+		<div class="container-fluid">
+
+			 
+
+			<div class="extension-nav" style="margin-right:52px;color:gray;">
+				<ul style="margin-top:12px;">
+					   
+
+					 <li><i class="material-icons" style="color:#20c997;vertical-align: middle; position: relative; top: px;font-size:34px;">verified_user</i>&nbsp;<span style="font-size:14px;font-family:arial;">100% SECURE</span></li>
+					
+						 
+				</ul>
+			</div><!-- .extension-nav -->
+
+			<div class="sina-nav-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="sina-brand social-on" href="index.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjuaozpIlmQS71whjx-D9NPVEP-edSlWJatw&s" style="margin-left:30px;margin-top:1px;">
+					 
+				</a>
+			</div><!-- .navbar-header -->
+			</div>
+			
+			<div class="vinni" style="display:flex;padding-left:250px;gap:40px;margin-top:17px;list-style-type:none;"><li>ADDRESS</li>---------------------------<li style="color:#20c997;">PAYMENT</li></div>
+			
+			</nav><br><br>
+			
+			<div class="container-fluid mt-2">
+    <h6 style="color:#fd7e14; padding-left:23px;font-size:17px;font-weight:bold;">Choose Payment Mode</h6><br>
+    <div class="row" style="border-top:solid 1px #cfcfcf;">
+	<div class="col-sm-6" style="font-size:16px;">
+	   <div class="container">
+	   <div class="row" style="border-right:1px solid #cfcfcf;;padding-top:40px;">
+        <div class="col-12">
+            <div class="payment-option" onclick="showMethods('cash')">
+                <div class="payment-title">Cash On Delivery (Cash/UPI)</div>
+            </div>
+            <div class="payment-methods" id="cash">
+                <div>
+                    <input type="radio" name="upi" id="phonepe">
+                    <label for="phonepe">cash on delivary(Cash/UPI)</label>
+                </div>
+            </div>
+        </div>
+        <!-- UPI -->
+        <div class="col-12">
+            <div class="payment-option" onclick="showMethods('upi')">
+                <div class="payment-title">UPI (Pay via any App)&nbsp;<span class="payment-offer">1 Offer</span></div>
+            </div>
+            <div class="payment-methods" id="upi">
+                <div>
+                    <input type="radio" name="upi" id="phonepe">
+                    <label for="phonepe">PhonePe</label>
+                </div>
+                <div>
+                    <input type="radio" name="upi" id="upi-id">
+                    <label for="upi-id">Enter UPI ID</label>
+                </div>
+            </div>
+        </div>
+        <!-- Credit/Debit Cards -->
+        <div class="col-12">
+            <div class="payment-option" onclick="showMethods('cards')">
+                <div class="payment-title">Credit/Debit Card <span class="payment-offer">4 Offers</span></div>
+            </div>
+            <div class="payment-methods" id="cards">
+                <div>
+                    <input type="radio" name="upi" id="phonepe">
+                    <label for="card">Debit Card</label>
+                </div>
+                <div>
+                    <input type="radio" name="upi" id="upi-id">
+                    <label for="card">Credit Card</label>
+                </div>
+            </div>
+        </div>
+        <!-- Pay Later -->
+        <div class="col-12">
+            <div class="payment-option" onclick="showMethods('paylater')">
+                <div class="payment-title">Pay Later&nbsp;<span class="payment-offer">1 Offer</span></div>
+            </div>
+            <div class="payment-methods" id="paylater">
+                <div>
+                    <input type="radio" name="paylater" id="Simple(Link&Paynow)">
+                    <label for="paylater">Simple(Link&Paynow)</label>
+                </div>
+                <div>
+                    <input type="radio" name="paylater" id="Lazypay">
+                    <label for="paylater">Lazypay</label>
+                </div>
+            </div>
+        </div>
+		<div class="col-12">
+            <div class="payment-option" onclick="showMethods('Wallets')">
+                <div class="payment-title">Wallets <span class="payment-offer">1 Offer</span></div>
+            </div>
+            <div class="payment-methods" id="Wallets">
+                <div>
+                    <input type="radio" name="Wallets" id="MobikWik">
+                    <label for="Wallets">MobikWik</label>
+                </div>
+                <div>
+                    <input type="radio" name="Wallets" id="Airtel Payment Bank">
+                    <label for="Wallets">Airtel Payment Bank</label>
+                </div>
+				<div>
+                    <input type="radio" name="Wallets" id="Pay Zapp">
+                    <label for="Wallets">Pay Zapp</label>
+                </div>
+                <div>
+                    <input type="radio" name="Wallets" id="Free Charge">
+                    <label for="Wallets">Free Charge</label>
+                </div>
+            </div>
+        </div>
+		 
+		<div class="col-12">
+            <div class="payment-option" onclick="showMethods('EMI')">
+                <div class="payment-title">EMI</div>
+            </div>
+            <div class="payment-methods" id="EMI">
+                <div>
+                    <input type="radio" name="Wallets" id="MobikWik">
+                    <label for="EMI">HDFC Credit Card EMI</label>
+                </div>
+                <div>
+                    <input type="radio" name="Wallets" id="Airtel Payment Bank">
+                    <label for="EMI">ICICI Credit Card EMI</label>
+                </div>
+				<div>
+                    <input type="radio" name="Wallets" id="Pay Zapp">
+                    <label for="EMI">Axis Credit Card EMI</label>
+                </div>
+                <div>
+                    <input type="radio" name="Wallets" id="Free Charge">
+                    <label for="EMI">RBL Bank Credit Card EMI</label>
+                </div>
+            </div>
+        </div>
+		<div class="col-12">
+            <div class="payment-option" onclick="showMethods('NetBanking')">
+                <div class="payment-title">NetBanking <span class="payment-offer">1 Offer</span></div>
+            </div>
+            <div class="payment-methods" id="NetBanking">
+                <div>
+                    <input type="radio" name="NetBanking" id="MobikWik">
+                    <label for="NetBanking">MobikWik</label>
+                </div>
+                <div>
+                    <input type="radio" name="NetBanking" id="Airtel Payment Bank">
+                    <label for="NetBanking">Airtel Payment Bank</label>
+                </div>
+				<div>
+                    <input type="radio" name="NetBanking" id="Pay Zapp">
+                    <label for="NetBanking">Pay Zapp</label>
+                </div>
+                <div>
+                    <input type="radio" name="NetBanking" id="Free Charge">
+                    <label for="NetBanking">Free Charge</label>
+                </div>
+            </div>
+        </div>
+		</div>
+		</div>
+    </div>
+	<div class="col-sm-4" style="padding-top:50px;">
+	  
+				 <h6 style="font-size:13px;">PRICE DETAILS (1 Item)</h6><br>
+				 <p>Total MRP <span style="padding-left:188px;">&nbsp;&nbsp;₹799</span></p>
+				 <p>Discount on MRP <span style="color:#ff3f6c;font-weight:bold;font-size:14px;">Know More</span> <span style="padding-left:58px;"><span style="color:#20c997;">-₹1,999</span></span></p>
+				 <p>Platform Fee <span style="color:#ff3f6c;font-weight:bold;font-size:14px;">Know More</span> <span style="padding-left:101px;">₹20</span></p>
+				 <p>Shipping Fee <span style="color:#ff3f6c;font-weight:bold;font-size:14px;">Know More</span><span style="padding-left:103px;">₹79</span></p>
+				 <div class="to" style="border-top:1px solid #c3cad1;">
+				  <h6 style="font-size:13px;padding-top:14px;font-weight:bold;">Total Amount<span style="padding-left:190px;">₹898</span></h6><br>
+				 </div>
+				 <div class="but">
+                <a href="#" style="text-decoration:none;padding:10px 50px;">
+                <span style=" color:white;text-decoration:none;font-size:13px;font-weight:bold;">PLACE ORDER</span>
+                </a>
+				</div>
+				 
+				 
+			  
+	</div>
+	</div>
+</div>
+
+<!-- Bootstrap JS -->
+ 
+<script>
+    function showMethods(optionId) {
+        // Hide all methods
+        const methods = document.querySelectorAll('.payment-methods');
+        methods.forEach(method => method.style.display = 'none');
+        
+        // Show the selected method
+        const selectedMethod = document.getElementById(optionId);
+        if (selectedMethod) {
+            selectedMethod.style.display = 'block';
+        }
+    }
+</script>
+			
+			
+			
+			
+			
+			
+
+ <!-- JS files -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="js/sina-nav.js"></script>			
+
+
+</body>
+</html>			

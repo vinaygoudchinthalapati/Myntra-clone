@@ -1,0 +1,308 @@
+
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Address3</title>
+	 <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjuaozpIlmQS71whjx-D9NPVEP-edSlWJatw&s" type="image/png">
+	<meta name="description" content="">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<!--For Plugins css-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" href="css/sina-nav.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	
+	
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="css/flickity.css" rel="stylesheet" type="text/css">
+
+<style>
+  
+   .but{padding: 11px 52px;
+    
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+	font-family:arial;
+	text-decoration:none;
+	text-align:center;
+   
+  }
+  
+  
+  .but a {
+    
+    color:inherit;/*Use inherit when the child element's color should always match its parent.*/ 
+    
+  }
+  
+  
+   .but {
+    background-color: #ff3f6c;  
+    color: white;
+  }
+
+  
+  .but:hover {
+    background-color: #e62e5c;  
+    color: white;
+	
+  }
+</style>
+	
+  <script>
+     function fun1()
+     {
+        a=document.vinni.fname.value
+        b=document.vinni.lname.value
+		c=document.vinni.mobile.value
+		d=document.vinni.email.value
+		atposition=d.indexOf("@")
+		dotposition=d.lastIndexOf(".")
+		e=document.vinni.code.value
+		g=document.vinni.address.value
+		h=document.vinni.local.value
+		i=document.vinni.city.value
+		j=document.vinni.State.value
+ 
+        if(a.length<4)
+     {
+        alert("First Name Must be 4 Characters")
+        return false
+     }
+     if(a.length>12)
+     {
+        alert("First Name Maximum 12 characters")
+        return false
+     }
+     if(b.length<4)
+     {
+        alert("Last Name Must be 4 Characters")
+        return false
+     }
+     if(b.length>20)
+     {
+        alert("Last Name Maximum 20 Characters")
+        return false
+     }
+	  if(isNaN(c))
+          {
+            alert("Number must be numeric")
+            return false
+          }
+           if(c.length!=10)
+          {
+            alert("mobile number must be contain 10 digits only")
+            return false
+          }
+		  if(atposition<1||dotposition<atposition+2||dotposition+2>=d.length)
+		  {
+            alert("Email is Invalid")
+			return false
+		  }
+       if(isNaN(e))
+	   {
+		alert("Pincode Must be Numeric")
+		return false
+	   }
+	   if(e.length!=6)
+	   {
+		alert("Enter Valid Pincode")
+		return false
+	   }
+	   if(g.length<2)
+	   {
+	   alert("Address minimum 2 characters")
+	   return false
+	   }
+	   if(h.length<4)
+	   {
+	    alert("Enter valid area")
+		return false
+	   }
+	    if(i.length<4)
+	   {
+	    alert("Enter valid city")
+		return false
+	   }
+	    if(j.length<4)
+	   {
+	    alert("Enter valid state")
+		return false
+	   }
+     }
+    
+  </script>
+	
+	</head>
+	
+	<body style="background-color:white;">
+	
+	
+	<nav class="sina-nav mobile-sidebar navbar-fixed" data-top="0">
+		<div class="container-fluid">
+
+			 
+
+			<div class="extension-nav" style="margin-right:52px;color:gray;">
+				<ul style="margin-top:12px;">
+					   
+
+					 <li><i class="material-icons" style="color:#20c997;vertical-align: middle; position: relative; top: px;font-size:34px;">verified_user</i>&nbsp;<span style="font-size:14px;font-family:arial;">100% SECURE</span></li>
+					
+						 
+				</ul>
+			</div><!-- .extension-nav -->
+
+			<div class="sina-nav-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="sina-brand social-on" href="index.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjuaozpIlmQS71whjx-D9NPVEP-edSlWJatw&s" style="margin-left:30px;margin-top:1px;">
+					 
+				</a>
+			</div><!-- .navbar-header -->
+			</div>
+			
+			<div class="vinni" style="display:flex;padding-left:250px;gap:40px;margin-top:17px;list-style-type:none;"><li style="color:#20c997;">ADDRESS</li>---------------------------<li>PAYMENT</li></div>
+			
+			</nav><br><br>
+			<div class="container-fluid">
+			<form name="vinni" onsubmit="return fun1()">
+			<h5 style="padding-left:120px;">DELIVERY ADDRESS :</h5><br>
+			<div class="row mb-2"style="border-top:solid 1px #c3cad1;"><br>
+			<div class="col-sm-1"></div>
+			  <div class="col-sm-7" style="border-right:solid 1px #c3cad1;padding-top:24px;">
+			   <b style="padding-left:15px;">CONTACT DETAILS</b><br><br>
+			   <div class="container">
+			   <div class="row">
+			   <div class="col-sm-6">
+			    <input type="text" class="form-control"name="fname" placeholder="First Name*">
+			  </div>
+			  <div class="col-sm-6">
+			  <input type="text" class="form-control"name="lname" placeholder="Last Name*">
+			  </div>
+			  </div>
+			  </div><br>
+			  <div class="container">
+			   <div class="row">
+			   <div class="col-sm-6">
+			    <input type="mobile" class="form-control"name="mobile" placeholder="Mobile No*">
+			  </div>
+			  <div class="col-sm-6">
+			  <input type="text" class="form-control"name="email" placeholder="Email*">
+			  </div>
+			  </div>
+			  </div><br>
+			   <div class="container">
+			   <b>ADDRESS</b><br><br>
+			   <div class="row">
+			   <div class="col-sm-12">
+			    <input type="text" class="form-control"name="code" placeholder="Pin Code*">
+			  </div><br><br><br>
+			   <div class="col-sm-12">
+			    <input type="text" class="form-control"name="address" placeholder="Address(House No.Building,Stree,Area)*">
+			  </div><br><br><br>
+			   <div class="col-sm-12">
+			    <input type="text" class="form-control"name="local" placeholder="Local/Town*">
+			  </div><br><br>
+			  </div>
+			  </div><br>
+			   <div class="container">
+			   <div class="row">
+			   <div class="col-sm-5">
+			    <input type="text" class="form-control"name="city" placeholder="City/District*">
+			  </div>
+			  <div class="col-sm-5">
+			  <input type="text" class="form-control"name="State" placeholder="State*">
+			  </div>
+			  </div>
+			  </div><br>
+			  
+			  <div class="container">
+			   <b>SAVE ADDRESS AS</b><br><br>
+			   <div class="row">
+			   <div class="col-sm-2">
+			    <button type="text" style="border:1px solid #ff3f6c;padding:6px 17px;border-radius:19px 19px 19px 19px;background-color:white;color:#ff3f6c;">HOME</button>
+			  </div>
+			   <div class="col-sm-2">
+			    <button type="text" style="border:1px solid gray;padding:6px 17px;border-radius:19px 19px 19px 19px;background-color:white;color:black;">WORK</button>
+			  </div>
+			  </div><br>
+			  </div><br><br>
+			   <div class="vijay" style="padding-left:14px;">
+		  <input type="checkbox" id="shirts">
+		  <label for="shirts"><span>Make this my default address</span></label>
+		  </div><br>
+		  <div class="container">
+		    <div class="row">
+			   <div class="col-sm-12"style="font-size:15px;">
+			    <button type="text" style="border:1px solid gray;padding:11px 250px;border-radius:11px 11px 11px 11px;background-color:#ff3f6c;color:white;"><span>SAVE ADDRESS</span></button>
+			  </div>
+			</div>
+		  </div>  
+			</div>
+			  <div class="col-sm-4"style="padding-top:24;">
+			    <h6 style="font-size:13px;">DELIVERY ESTIMATES</h6>
+				<div class="img"style="margin-top:25px;"><img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2024/NOVEMBER/5/wao19bYH_10b101d7146647b9b49963b93f4fc63a.jpg" width="70px;">&nbsp;&nbsp;&nbsp;<span>Estimated delivery by </span><span style="color:#ff3f6c;font-weight:bold;font-size:14px;">9 Dec 2024</span>
+				</div><br>
+				 <h6 style="font-size:13px;">PRICE DETAILS (1 Item)</h6><br>
+				 <p>Total MRP <span style="padding-left:188px;">₹1,099</span></p>
+				 <p>Discount on MRP <span style="color:#ff3f6c;font-weight:bold;font-size:14px;">Know More</span> <span style="padding-left:58px;"><span style="color:#20c997;">-₹900</span></span></p>
+				 <p>Platform Fee <span style="color:#ff3f6c;font-weight:bold;font-size:14px;">Know More</span> <span style="padding-left:101px;">₹20</span></p>
+				 <p>Shipping Fee <span style="color:#ff3f6c;font-weight:bold;font-size:14px;">Know More</span><span style="padding-left:103px;">₹79</span></p>
+				 <div class="to" style="border-top:1px solid #c3cad1;">
+				  <h6 style="font-size:13px;padding-top:14px;font-weight:bold;">Total Amount<span style="padding-left:190px;">₹1,198</span></h6><br>
+				 </div>
+				 <div class="but">
+                <a href="PAYMENT.html" style="text-decoration:none;padding:10px 100px;">
+                <span style=" color:white;text-decoration:none;font-size:13px;font-weight:bold;">CONTINUE</span>
+                </a>
+				</div>
+				 
+			  </div>
+			</div>
+			</form>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	   <!-- JS files -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="js/sina-nav.js"></script>
+	   
+
+
+
+
+
+
+
+</body>
+</html>
